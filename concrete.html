@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- МЕТА -->
+    <title>ИП Рога и Копыта:Бетон</title>
+    <meta name="description" content="купить цемент, клей, штукатурка ИП Рога и Копыта, магазин отделочных материалов">
+    <meta name="keywords" content="цемент, клей, штукатурка, Рога и Копыта, магазин, строительные, отделочные, материалы">
+
+    <!-- Контролирует поведение поисковых систем при индексации страницы -->
+    <meta name="robots" content="index,follow,noodp"><!-- Все поисковые системы -->
+    <meta name="googlebot" content="index,follow"><!-- Указание отдельно для Google -->
+
+
+    <meta name="google" content="nositelinkssearchbox"><!-- Позволяет указать Google не показывать в поисковой выдаче поле для поиска по сайту -->
+    <meta name="google" content="notranslate"><!-- Позволяет указать Google не предлагать перевести эту страницу -->
+    <meta name="google-site-verification" content="verification_token"><!-- Подтверждает авторство страницы в Google Search Console -->
+    <meta name="generator" content="PhpStorm"><!-- Тег указания ПО, которое сгенерировало эту страницу -->
+    <meta name="subject" content="магазин отделочных материалов"><!-- Короткое описание тематики вашего сайта -->
+
+    <!-- Фавиконы и иконки сайта -->
+    <link rel="icon" href="image/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#4285f4">
+
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#4285f4">
+
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Яндекс.Браузер -->
+    <meta name="viewport" content="ya-title=#4e69a2,ya-dock=fade">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="db/db.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="header-inner">
+            <div class="header-inner-logo">
+                <div class="header-inner-logo-name">ИП</div>
+                <div class="header-inner-logo-name">"Рога и копыта"</div>
+                <div class="header-inner-logo-slogan">строительное снабжение</div>
+            </div>
+            <div class="header-inner-contacts-left">
+                <div class="header-inner-contacts-left-cont">Нас можно найти по адресу:</div>
+                <div class="header-inner-contacts-left-cont">С нами можно связаться по телефону:</div>
+            </div>
+            <div class="header-inner-contacts-right">
+                <div class="header-inner-contacts-right-cont">Республика Крым, Симферополь<br>Севастопольская улица, 29В</div>
+
+                <div class="header-inner-contacts-right-cont">+7978-999-99-99<br>+7978-888-88-88</div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main-left-side">
+            <div class="main-left-side-nav">
+                <ul class="main-left-side-nav-menu">
+                    <li class="main-left-side-nav-menu-item"><a href="index.html">Цемент</a></li>
+                    <li class="main-left-side-nav-menu-item"><a href="glue.html">Клей</a></li>
+                    <li class="main-left-side-nav-menu-item active"><a href="concrete.html">Бетон</a></li>
+                    <li class="main-left-side-nav-menu-item"><a href="sand.html">Песок</a></li>
+                    <li class="main-left-side-nav-menu-item"><a href="breakstone.html">Щебень</a></li>
+                    <li class="main-left-side-nav-menu-item"><a href="putty.html">Штукатурка</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-catalog">
+        </div>
+    </div>
+    <div class="map">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af616af1837e036a48e7648ffc2ad88eb16aee34c11168b1882caa5f23fa3ff71&amp;width=100%25&amp;height=480&amp;lang=ru_RU&amp;scroll=true"></script>
+    </div>
+    <div class="footer"></div>
+</div>
+
+<script>
+
+    if(db.concrete == undefined){
+        let divMain = document.querySelector("div.main-catalog");
+
+        let divProductInCategoryMissing = document.createElement("div");
+        divProductInCategoryMissing.innerText = "Товары в данной категории отсутствуют";
+
+        divMain.appendChild(divProductInCategoryMissing);
+    }else{
+        let divMain = document.querySelector("div.main-catalog");
+
+        for(let i = 0; i < db.concrete.length; i++){
+
+            let divCard = document.createElement("div");
+            divCard.classList.add("card");
+
+            let divCardImg = document.createElement("div");
+            divCardImg.classList.add("card-img");
+            divCardImg.style.backgroundImage = "url("+db.concrete[i].img+")";
+            divCardImg.setAttribute("alt", db.concrete[i].imgAlt);
+
+            let divCardTitle = document.createElement("div");
+            divCardTitle.classList.add("card-title");
+            divCardTitle.innerText = db.concrete[i].name;
+
+            let divCardPrice = document.createElement("div");
+            divCardPrice.classList.add("card-price");
+
+            let divCardPriceText = document.createElement("div");
+            divCardPriceText.classList.add("card-price-text");
+            divCardPriceText.innerText = "Цена:";
+
+            let divCardPriceValue = document.createElement("div");
+            divCardPriceValue.classList.add("card-price-value");
+            divCardPriceValue.innerText = db.concrete[i].price;
+
+            divCardPrice.appendChild(divCardPriceText);
+            divCardPrice.appendChild(divCardPriceValue);
+
+            let divCardCount = document.createElement("div");
+            divCardCount.classList.add("card-count");
+
+            let divCardCountText = document.createElement("div");
+            divCardCountText.classList.add("card-count-text");
+            divCardCountText.innerText = "Количество:";
+
+            let divCardCountValue = document.createElement("div");
+            divCardCountValue.classList.add("card-count-value");
+            divCardCountValue.innerText = db.concrete[i].count;
+
+            divCardCount.appendChild(divCardCountText);
+            divCardCount.appendChild(divCardCountValue);
+
+            divCard.appendChild(divCardImg);
+            divCard.appendChild(divCardTitle);
+            divCard.appendChild(divCardPrice);
+            divCard.appendChild(divCardCount);
+
+            divMain.appendChild(divCard);
+        }
+    }
+</script>
+
+
+</body>
+</html>

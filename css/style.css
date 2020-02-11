@@ -1,0 +1,162 @@
+html, body {
+  height: 100%;
+  width: 100%; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  min-width: 720px;
+  font-family: Verdana, sans-serif;
+  font-weight: bold; }
+
+.header {
+  display: flex;
+  height: 300px;
+  background-image: url("../image/top-header.jpg");
+  background-position: center center;
+  color: #fff;
+  text-shadow: 0 3px 1px #000000; }
+  .header-inner {
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 5px #000000; }
+    .header-inner-logo, .header-inner-contacts-left, .header-inner-contacts-right {
+      flex-basis: 33%; }
+    .header-inner-logo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .header-inner-logo-name {
+        font-size: 48px; }
+      .header-inner-logo-slogan {
+        font-size: 24px;
+        line-height: 48px; }
+    .header-inner-contacts-left {
+      display: flex;
+      flex-direction: column;
+      font-size: 24px; }
+      .header-inner-contacts-left-cont {
+        flex-basis: 150px; }
+        .header-inner-contacts-left-cont:first-child {
+          padding-top: 40px;
+          flex-basis: 110px; }
+    .header-inner-contacts-right {
+      display: flex;
+      flex-direction: column;
+      font-size: 30px; }
+      @media (max-width: 1540px) {
+        .header-inner-contacts-right {
+          font-size: 24px; } }
+      .header-inner-contacts-right-cont {
+        flex-basis: 150px; }
+        .header-inner-contacts-right-cont:first-child {
+          padding-top: 40px;
+          flex-basis: 110px; }
+
+.main {
+  display: flex;
+  flex-grow: 1;
+  background-color: #f6f7f9; }
+  .main-left-side {
+    min-height: 500px;
+    width: 310px;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 25px; }
+    .main-left-side-nav {
+      width: 310px; }
+      .main-left-side-nav-menu {
+        list-style-type: none;
+        margin: 0;
+        padding: 0; }
+        .main-left-side-nav-menu .active a {
+          text-decoration: underline; }
+        .main-left-side-nav-menu-item a {
+          display: flex;
+          align-items: center;
+          height: 40px;
+          padding-left: 20px;
+          border-top: 1px solid #d3d4d5;
+          border-left: 1px solid #d3d4d5;
+          border-right: 1px solid #d3d4d5;
+          background-color: white;
+          text-decoration: none;
+          color: #333333;
+          font-size: 14px; }
+        .main-left-side-nav-menu-item:last-child {
+          border-bottom: 1px solid #d3d4d5; }
+  .main-catalog {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    padding-top: 40px; }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  height: 400px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  color: #ffffff;
+  font-family: "Verdana", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  border: 1px solid #d3d4d5;
+  background-color: #2f2f2f; }
+  .card-img {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 240px;
+    min-height: 200px; }
+  .card-title {
+    flex-grow: 1;
+    margin: 20px 0 10px 0;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 20px 0 20px; }
+  .card-price {
+    display: flex;
+    justify-content: left;
+    padding: 0 20px 0 20px; }
+    .card-price-text {
+      flex-grow: 1;
+      flex-basis: 50%; }
+    .card-price-value {
+      color: #ff0000;
+      font-size: 18px;
+      flex-grow: 1;
+      flex-basis: 50%; }
+  .card-count {
+    display: flex;
+    justify-content: left;
+    font-size: 12px;
+    margin: 10px 0 20px 0;
+    padding: 0 20px 0 20px; }
+    .card-count-text {
+      flex-grow: 1;
+      flex-basis: 50%; }
+    .card-count-value {
+      text-align: left;
+      flex-grow: 1;
+      flex-basis: 50%; }
+  .card:hover {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.75), 3px 0 5px rgba(0, 0, 0, 0.5), -3px 0 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s; }
+
+.map {
+  min-height: 500px;
+  background-color: #2f2f2f;
+  padding: 10px 0 10px 0; }
+
+.footer {
+  min-height: 200px;
+  background-color: #2f2f2f; }
