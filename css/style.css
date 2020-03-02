@@ -149,6 +149,9 @@ html, body {
               text-decoration: none; }
       .main-content-menu-item-cement {
         background-image: url("../image/cement-sml.jpg"); }
+        .main-content-menu-item-cement:hover .main-content-menu-item-cement-overlay {
+          background-color: #e20d01;
+          height: 100%; }
       .main-content-menu-item-glue {
         background-image: url("../image/glue-sml.jpg"); }
         .main-content-menu-item-glue:hover .main-content-menu-item-glue-overlay {
