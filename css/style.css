@@ -148,32 +148,32 @@ html, body {
               color: white;
               text-decoration: none; }
       .main-content-menu-item-cement {
-        background-image: url("/image/cement-sml.jpg"); }
+        background-image: url("../image/cement-sml.jpg"); }
         .main-content-menu-item-cement:hover .main-content-menu-item-cement-overlay {
           background-color: #e20d01;
           height: 100%; }
       .main-content-menu-item-glue {
-        background-image: url("/image/glue-sml.jpg"); }
+        background-image: url("../image/glue-sml.jpg"); }
         .main-content-menu-item-glue:hover .main-content-menu-item-glue-overlay {
           background-color: #ff9600;
           height: 100%; }
       .main-content-menu-item-concrete {
-        background-image: url("/image/concrete-sml.jpg"); }
+        background-image: url("../image/concrete-sml.jpg"); }
         .main-content-menu-item-concrete:hover .main-content-menu-item-concrete-overlay {
           background-color: #04649c;
           height: 100%; }
       .main-content-menu-item-sand {
-        background-image: url("/image/sand-sml.jpg"); }
+        background-image: url("../image/sand-sml.jpg"); }
         .main-content-menu-item-sand:hover .main-content-menu-item-sand-overlay {
           background-color: #f9cc8d;
           height: 100%; }
       .main-content-menu-item-breakstone {
-        background-image: url("/image/breakstone.jpg"); }
+        background-image: url("../image/breakstone.jpg"); }
         .main-content-menu-item-breakstone:hover .main-content-menu-item-breakstone-overlay {
           background-color: #03c9b0;
           height: 100%; }
       .main-content-menu-item-putty {
-        background-image: url("/image/putty-sml.jpg"); }
+        background-image: url("../image/putty-sml.jpg"); }
         .main-content-menu-item-putty:hover .main-content-menu-item-putty-overlay {
           background-color: #c359cc;
           height: 100%; }
