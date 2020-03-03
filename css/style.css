@@ -124,9 +124,9 @@ html, body {
       margin: 40px 200px 40px 200px; }
       .main-content-menu-item-cement, .main-content-menu-item-glue, .main-content-menu-item-concrete, .main-content-menu-item-sand, .main-content-menu-item-breakstone, .main-content-menu-item-putty {
         display: flex;
-        flex-basis: 300px;
+        flex-basis: 280px;
         position: relative;
-        height: 300px; }
+        height: 280px; }
         .main-content-menu-item-cement-overlay, .main-content-menu-item-glue-overlay, .main-content-menu-item-concrete-overlay, .main-content-menu-item-sand-overlay, .main-content-menu-item-breakstone-overlay, .main-content-menu-item-putty-overlay {
           position: absolute;
           bottom: 0;
